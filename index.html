@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="Bday.css">
+    </head>
+    <body>
+        <header>Happy Birthday Beautifull!!!</header>
+        <div class="div1">
+            <audio id="sparklebutton" src="sparklebutton.mp3"></audio>
+            <button 
+            type="button" 
+            class="animated-button"
+            id="sparkleButton" 
+            onclick="document.getElementById('sparklebutton').currentTime = 0; document.getElementById('sparklebutton').play();">
+            Click
+            </button>
+        </div>
+
+        <div id="gameModal" class="modal">
+            <div class="modal-content girly-theme">
+                <span class="close-btn" id="closeGame">&times;</span>
+                <h2>💖Catch the Magic Star💖</h2>
+                <div class="game-area">
+                    <div id="gameTarget">⭐</div>
+                </div>
+            </div>
+        </div>
+
+        <div id="rewardModal" class="modal reward-z-index">
+            <div class="modal-content reward-theme">
+                <h2>🎉Congratulations, Gorgeous!!🎉</h2>
+                <p class="reward-text">✨Here's your special Reward✨</p>
+                <a href="Reward.html" class="reward-link-btn">Claim Reward</a>
+            </div>
+        </div>
+
+        <script src="Bday.js"></script>
+    </body>
+</html>

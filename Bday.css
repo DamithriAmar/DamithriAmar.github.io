@@ -1,0 +1,165 @@
+header{
+    color: #ffffff;
+    text-align: center;
+    font-size: xxx-large; 
+    font-family: 'Sour Gummy', cursive;
+    font-weight: bold;
+    padding: 5%;
+}
+
+.div1{
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+
+}
+
+body{
+    background-image: url('div1.jpg');
+}
+
+#sparkleButton{
+    background-color: blanchedalmond;
+    padding: 5%;
+    font-family: 'sour gummy', cursive;
+    font-size: x-large;
+    font-weight: bold;
+    color: burlywood;
+    border-radius: 50%;
+    border-color: yellow;
+    cursor: pointer;
+    animation: jump 2s ease-in-out infinite, sparkle 2s linear infinite;
+    
+}
+
+@keyframes jump{
+    0%, 100%{
+        box-shadow: 0 0 10px rgba(255, 223, 0, 0.5)
+                    0 0 20px rgba(255, 223, 0, 0.3);
+    }
+    50%{
+        transform: translateY(-15px);
+    }
+}
+
+@keyframes sparkle{
+    0%, 100%{
+        box-shadow: 0 0 25px rgba(255, 215, 0, 1),
+                    0 0 40px rgba(255, 165, 0, 0.8);
+    }
+}
+
+.modal{
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(255, 182, 193, 0.4);
+    backdrop-filter: blur(8px);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.reward-z-index{
+    z-index: 2000;
+}
+
+.modal-content{
+    padding: 40px;
+    border-radius: 30px;
+    text-align: center;
+    position: relative;
+    width: 420px;
+    box-shadow: 0 0 30px rgba(255 20 147 0.6);
+    border: 4px solid #fff;
+}
+
+.girly-theme{
+    background: linear-gradient(135deg, #ffe4e1 0%, #ffb6c1 50%, #e6e6fa 100%);
+    color: #ff1493;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+.game-area{
+    width: 100%;
+    height: 300px;
+    background-color: #fff0f5;
+    border: 3px dashed #ff69b4;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+#gameTarget{
+    font-size: 45px;
+    position: absolute;
+    top: 0; left: 0;
+    cursor: pointer;
+    user-select: none;
+    filter: drop-shadow(0 0 10px #ff007f);
+    transition: top 0.4s cubic-bezier(0.1, 0.8, 0.3, 1),
+                left 0.4s cubic-bezier(0.1, 0.8, 0.3, 1);
+}
+
+.close-btn{
+    position: absolute;
+    top: 15px; right: 25px;
+    font-size: 35px;
+    cursor: pointer;
+    color: #ff69b4;
+}
+
+.close-btn:hover {color: #ff1493;}
+
+.reward-theme{
+    background: linear-gradient(45deg, #ff007f, #ff69b4, #ffb6c1, #ba55d3);
+    background-size: 300% 300%;
+    animation: holyShift 4s ease infinite;
+    color: #ffffff;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.reward-text{
+    font-size: 20px;
+    font-weight: bold;
+    margin: 25px 0;
+    animation: textBlink 1s linear infinite;
+}
+
+.reward-link-btn{
+    display: inline-block;
+    text-decoration: none;
+    background-color: #ffffff;
+    color: #ff007f;
+    font-size: 22px;
+    font-weight: bold;
+    padding: 15px 40px;
+    border-radius: 50px;
+    box-shadow: 0 0 20px #ffffff;
+    transition: all 0.3s ease;
+    border: 2px solid#ff007f;
+}
+
+.reward-link-btn:hover {
+    transform: scale(1.15);
+    box-shadow: 0 0 35px #ff007f, 0 0 15px #ffffff;
+    background-color: #ff007f;
+    color: #ffffff;
+}
+
+@keyframes holyShift {
+    0% {background-position: 0% 50%; }
+    50% {background-position: 100% 50%; }
+    100% {background-position: 0% 50%; }
+}
+
+@keyframes textBlink{
+    0%, 100% {opacity: 1; transform: scale(1);}
+    50% {opacity: 0.8; transform: scale(1.05);}
+}
+
+
