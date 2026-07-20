@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
     function moveTarget() {
         if(!gameTarget) return;
         const maxX = 100;
-        const maxY = 200;
+        const maxY = 100;
         const randomX = Math.floor(Math.random() * maxX);
         const randomY = Math.floor(Math.random() * maxY);
         
